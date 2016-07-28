@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>	
+	<div id="imgBox"></div>
+	<div id="showImageData">showImageData</div>
+	
+	<script src="dist/imageClipboard.js"></script>
+	<script>
+	// 实例化
+	var imageClipboard = new Enjoy.ImageClipboard('#imgBox', {
+		maxWidth: 500,
+		maxHeight: 400,
+		marginRight: 10
+	});
+	// 获取图片数据
+	var showImageData = document.querySelector('#showImageData');
+	showImageData.addEventListener('click', function() {
+		console.log(imageClipboard.getImgData)
+	}, false);	
+	</script>
+</body>
+</html>
